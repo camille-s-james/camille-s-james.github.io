@@ -1,12 +1,12 @@
 function toProjects(){
-    window.location.href = "file:///C:/Users/cjam2/index.html/projects.html";
+    window.location.href = "https://camille-s-james.github.io/projects.html";
 }
 function toHome(){
-    window.location.href = "file:///C:/Users/cjam2/index.html/index.html";
+    window.location.href = "https://camille-s-james.github.io/";
 }
 function toSummer(){
-    window.location.href = "file:///C:/Users/cjam2/index.html/summer.html";
+    window.location.href = "https://camille-s-james.github.io/summer.html";
 }
 function toHobbies(){
-    window.location.href = "file:///C:/Users/cjam2/index.html/hobbies.html";
+    window.location.href = "https://camille-s-james.github.io/hobbies.html";
 }
