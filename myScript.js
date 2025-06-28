@@ -1,5 +1,5 @@
 function toProjects(){
-    window.location.href = "https://camille-s-james.github.io/projects.html";
+    window.location.href = "https://camille-s-james.github.io/#/projects.html";
 }
 function toHome(){
     window.location.href = "https://camille-s-james.github.io/";
