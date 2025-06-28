@@ -1,3 +1,21 @@
 .p1title{
-    color :purple
+    color :purple;
+    font-size: 3vw;
+}
+
+.p2heading{
+    color :black;
+    font-size: 2vw;
+}
+
+.p4heading{
+    color:black;
+    font-size: .5vw;
+}
+
+.bigSquare{
+    background-color :aquamarine;
+    height: 40vw;
+    width: 70vw;
+    top: 90px;
 }
