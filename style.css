@@ -1,11 +1,63 @@
+:root {
+  --clr-dark: #0f172a;
+  --clr-light: #f1f5f9;
+  --clr-accent: #e11d48;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5em 0 0 0;
+  padding: 0;
+  line-height: 1.6;
+  word-spacing: 1.4px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+}
+
+.container {
+  width: 99vw;
+  height: 99vh;
+  margin: 0 auto;
+  border: 1vw solid var(--clr-dark);
+}
+
+.item {
+  padding: 0.5em;
+  background-color: #fb7185;
+  font-weight: 700;
+  color: var(--clr-light);
+  border: 10px solid var(--clr-accent);
+}
+
 .p1title{
     color :purple;
-    font-size: 3vw;
+    font-size: 5vw;
+    top: 2vw;
+    left: 63vw;
 }
 
 .p2heading{
     color :black;
+    font-size: 1.5vw;
+    font-weight: 50;
+    top: 10vw;
+    left: 63vw;
+}
+
+.mainText{
+    color: black;
     font-size: 2vw;
+    font-weight: 5;
+    width: 45vw;
+    font-family: "Georgia", serif;
+    top: 18vw;
+    left: 47vw;
 }
 
 .p4heading{
@@ -13,9 +65,34 @@
     font-size: .5vw;
 }
 
-.bigSquare{
-    background-color :aquamarine;
-    height: 40vw;
-    width: 70vw;
-    top: 90px;
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(10, 9vw); /*fr= fill remainng space. col 4 can be is 100px (during resize)*/
+    /*grid-auto-flow: column; /*items in ig are now added to a new column*
+    grid-auto-columns: 100px; /*when you add an item and grid is full it goes outside to implicit grid- now all rows in ig are 100px*/
+    grid-template-rows: repeat(auto-fill, minmax(10vh, 1fr)); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
+    /*grid-gap: rowem, colem; creates gaps btwn grids*/
+}
+
+.item-1 {
+    grid-row: 1 / 10; /*starts from default start and goes two rows*/
+    grid-column: 1 / 2; /*start / end */
+}
+.item-2 {
+    grid-row: 1 / 10; 
+    grid-column: 11 / 12; /*start / end */
+    /*z-index: 1; /item 2 is ontop of anything*/
+}
+.item-3 {
+    grid-area: 2 / 2 /9 / 5; /*row stat, col start, row end, col end*/
+}
+.item-4{
+    grid-area: 3 / 6 / 3 / 10;
+}
+.item-5{
+    grid-area: 4 / 6 / 4 / 10;
+}
+.item-6{
+    grid-area: 7 / 6 / 7 / 10;
 }
