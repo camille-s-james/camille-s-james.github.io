@@ -4,6 +4,8 @@
   --clr-accent: #e11d48;
 }
 
+
+
 *,
 *::before,
 *::after {
@@ -18,6 +20,14 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--clr-dark);
   background-color: var(--clr-light);
+}
+
+
+.font {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 30;
+  font-style: normal;
 }
 
 .container {
