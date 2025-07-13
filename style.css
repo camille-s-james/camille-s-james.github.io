@@ -17,7 +17,26 @@
     color: red;
 }
 
+.linkedin {
+  align-self: center;
+  justify-self: center;
+  background-image: url( "img/linkedin.jpg" );
+  cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  background-size: cover;
+}
 
+.github {
+  align-self: center;
+  justify-self: center;
+  background-size: cover;
+  background-image: url( "img/hub.jpg" );
+  cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  background-size: cover;
+}
 
 .title {
   font-family: "League Spartan", sans-serif;
@@ -52,7 +71,11 @@
   border: 10px solid var(--clr-accent);
 }
 
-
+.pic{
+  object-position: start;
+  max-width: 1%;
+  height: 1%;
+}
 
 
 .container{
@@ -83,6 +106,10 @@
 }
 .item-3 {
     grid-area: 2 / 2 /9 / 5; /*row stat, col start, row end, col end*/
+    background-image: url( "img/atdesk.jpg" );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .item-4{
     grid-area: 3 / 6 / 3 / 10;
@@ -91,5 +118,9 @@
     grid-area: 4 / 6 / 4 / 10;
 }
 .item-6{
-    grid-area: 7 / 6 / 7 / 10;
+    grid-area: 6 / 7 / 6 / 8;
+   
+}
+.item-7{
+    grid-area: 6 / 8 / 6 / 9;
 }
