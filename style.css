@@ -3,22 +3,44 @@
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(11, 8.18vw); /*fr= fill remainng space. col 4 can be is 100px (during resize)*/
-    grid-template-rows: repeat(20, 11vh); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
+    grid-template-rows: repeat(250, 11vh); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
+}
+
+.topbar{
+  grid-area: 0 / 0 / 2 / 11;
+  background-color: pink;
+  width: 98vw;
+  height: 3vw;
 }
 
 .mainPic {
-    grid-area: 2 / 6 / 4 / 7; /*row stat, col start, row end, col end*/
+    grid-area: 6 / 6 / 6 / 8; /*row stat, col start, row end, col end*/
     background-image: url( "img/onmountain.JPG" );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 15vw;
-    height: 15vw;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
+    align-self: end;
+    justify-self: center;
+}
+
+.secondPic {
+  grid-area: 15 / 2 / 17 / 4 ;
+  align-self: center;
+  justify-self: center;
+  height: 25vw;
+  width: 25vw;
+  background-image: url("img/onmountain.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
 }
 
 .linkedin {
-  grid-area: 7 / 7 / 7 / 7;
+  grid-area: 9 / 7 / 9 / 7;
   align-self: center;
   justify-self: center;
   background-image: url( "img/in.png" );
@@ -34,7 +56,7 @@
 }
 
 .github {
-  grid-area: 7 / 6 / 7 / 6;
+  grid-area: 9 / 6 / 9 / 6;
   align-self: center;
   justify-self: center;
   background-size: cover;
@@ -50,19 +72,19 @@
 }
 
 .title {
-  grid-area: 5 / 4 / 5 / 10;
+  grid-area: 7 / 4 / 9 / 10;
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 690;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 6vw;
   color: black;
   align-self: center;
   justify-self: center;
 }
 
 .heading {
-  grid-area: 6 / 5 / 6 / 9;
+  grid-area: 8 / 5 / 10 / 9;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -76,15 +98,107 @@
 }
 
 .text{
-  grid-area: 16 / 3 / 20 / 11;
+  grid-area: 14 / 5 / 17 / 15;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   font-variation-settings:
     "wdth" 100;
+  letter-spacing: .1vw;
   color: black;
   align-self: center;
   justify-self: center;
+}
+
+
+
+.subtitleOne{
+  grid-area: 12 / 6 / 12 / 10;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 6vw;
+  color: black;
+  align-self: end; /*vertical*/
+  justify-self: center; /*horizontal*/
+}
+
+.subtitleTwo{
+  grid-area: 27 / 8 / 27 / 6;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 6vw;
+  color: black;
+  align-self: end; 
+  justify-self: center; 
+}
+
+.exp1{
+  grid-area: 30 / 2 / 40 / 8;
+  background-color: orange;
+  width: 20vw;
+  height: 25vw;
+}
+
+.exp2{
+  grid-area: 30 / 6 / 40 / 8;
+  background-color: pink;
+  width: 20vw;
+  height: 25vw;
+  justify-self: center;
+}
+
+.exp3{
+  grid-area: 30 / 10 / 40 / 12;
+  background-color: red;
+  width: 20vw;
+  height: 25vw;
+  justify-self: center;
+}
+
+.subtitleThree{
+  grid-area: 43 / 8 / 43 / 6;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 6vw;
+  color: black;
+  align-self: end; 
+  justify-self: center; 
+}
+
+.proj1{
+  grid-area: 46 / 2 / 46 / 8;
+  background-color: green;
+  width: 20vw;
+  height: 25vw;
+}
+
+.proj2{
+  grid-area: 46 / 6 / 46 / 8;
+  background-color: blue;
+  width: 20vw;
+  height: 25vw;
+  justify-self: center;
+}
+
+.proj3{
+  grid-area: 46 / 10 / 46 / 12;
+  background-color: hotpink;
+  width: 20vw;
+  height: 25vw;
+  justify-self: center;
+}
+
+.bottombar{
+  grid-area: 47 / 0 / 47 / 11;
+  background-color: pink;
+  width: 8vw;
+  height: 3vw;
 }
