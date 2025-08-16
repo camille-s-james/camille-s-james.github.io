@@ -1,71 +1,87 @@
 .container{
     width: 90vw;
-    height: 98vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(10, 9vw); /*fr= fill remainng space. col 4 can be is 100px (during resize)*/
-    grid-template-rows: repeat(auto-fill, minmax(10vh, 1fr)); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
+    grid-template-columns: repeat(11, 8.18vw); /*fr= fill remainng space. col 4 can be is 100px (during resize)*/
+    grid-template-rows: repeat(20, 11vh); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
 }
 
 .mainPic {
-    grid-area: 2 / 2 /9 / 5; /*row stat, col start, row end, col end*/
+    grid-area: 2 / 6 / 4 / 7; /*row stat, col start, row end, col end*/
     background-image: url( "img/onmountain.JPG" );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
 }
 
 .linkedin {
-  grid-area: 6 / 7 / 6 / 8;
+  grid-area: 7 / 7 / 7 / 7;
   align-self: center;
   justify-self: center;
   background-image: url( "img/in.png" );
   cursor: pointer;
-  width: 5vw;
-  height: 5vw;
+  width: 2vw;
+  height: 2vw;
   background-size: cover;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
-  overflow: hidden;
+  overflow-y: auto;
   outline: none;
 }
 
 .github {
-  grid-area: 6 / 8 / 6 / 9;
+  grid-area: 7 / 6 / 7 / 6;
   align-self: center;
   justify-self: center;
   background-size: cover;
   background-image: url( "img/hub.png" );
   cursor: pointer;
-  width: 5vw;
-  height: 5vw;
+  width: 2vw;
+  height: 2vw;
   background-size: cover;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
-  overflow: hidden;
   outline: none;
 }
 
 .title {
-  grid-area: 3 / 6 / 3 / 10;
+  grid-area: 5 / 4 / 5 / 10;
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 690;
   font-style: normal;
-  font-size: 5.5vw;
+  font-size: 5vw;
   color: black;
   align-self: center;
   justify-self: center;
 }
 
 .heading {
-  grid-area: 4 / 6 / 4 / 10;
+  grid-area: 6 / 5 / 6 / 9;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
+  font-variation-settings:
+    "wdth" 100;
+  color: black;
+  align-self: center;
+  justify-self: center;
+}
+
+.text{
+  grid-area: 16 / 3 / 20 / 11;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5vw;
   font-variation-settings:
     "wdth" 100;
   color: black;
