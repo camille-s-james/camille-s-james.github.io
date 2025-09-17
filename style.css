@@ -1,3 +1,6 @@
+.hidden{ display: none;}
+.visible{ display: block;}
+
 .container{
     width: 90vw;
     height: 100vh;
@@ -6,47 +9,70 @@
     grid-template-rows: repeat(250, 11vh); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
 }
 
+
 .topbar{
   grid-area: 0 / 0 / 2 / 11;
-  background-color: pink;
+  background-color: #fefdfb;
   width: 98vw;
   height: 3vw;
 }
 
 .mainPic {
-    grid-area: 6 / 6 / 6 / 8; /*row stat, col start, row end, col end*/
+    grid-area: 1 / 6 / 6 / 8; /*row stat, col start, row end, col end*/
     background-image: url( "img/onmountain.JPG" );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 25vw;
-    height: 25vw;
+    width: 21vw;
+    height: 21vw;
     border-radius: 50%;
     align-self: end;
     justify-self: center;
 }
 
-.secondPic {
-  grid-area: 15 / 2 / 17 / 4 ;
-  align-self: center;
+.panel1{
+  width: 98vw;
+  height: 50vw;
+  grid-area: 0 / 0 / 9 / 13;
+  background-color: #fefdfb;
+  justify-self: start;
+  /*align-self: end;*/
+}
+
+.title {
+  grid-area: 4 / 7 / 7 / 17;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 85px;
+  color: black;
+  align-self: end;
   justify-self: center;
-  height: 25vw;
-  width: 25vw;
-  background-image: url("img/onmountain.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
+}
+
+.heading {
+  grid-area: 7 / 7 / 10 / 17;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  font-variation-settings:
+    "wdth" 100;
+  color: black;
+  align-self: start;
+  justify-self: center;
 }
 
 .linkedin {
-  grid-area: 9 / 7 / 9 / 7;
-  align-self: center;
+  grid-area: 8 / 9 / 9 / 12;
+  align-self: start;
   justify-self: center;
   background-image: url( "img/in.png" );
   cursor: pointer;
-  width: 2vw;
-  height: 2vw;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -56,14 +82,14 @@
 }
 
 .github {
-  grid-area: 9 / 6 / 9 / 6;
-  align-self: center;
+  grid-area: 8 / 7 / 9 / 10;
+  align-self: start;
   justify-self: center;
   background-size: cover;
   background-image: url( "img/hub.png" );
   cursor: pointer;
-  width: 2vw;
-  height: 2vw;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -71,94 +97,158 @@
   outline: none;
 }
 
-.title {
-  grid-area: 7 / 4 / 9 / 10;
-  font-family: "League Spartan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-  font-size: 6vw;
-  color: black;
-  align-self: center;
-  justify-self: center;
-}
-
-.heading {
-  grid-area: 8 / 5 / 10 / 9;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.2vw;
-  font-variation-settings:
-    "wdth" 100;
-  color: black;
-  align-self: center;
-  justify-self: center;
-}
-
-.text{
-  grid-area: 14 / 5 / 17 / 15;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.4vw;
-  font-variation-settings:
-    "wdth" 100;
-  letter-spacing: .1vw;
-  color: black;
-  align-self: center;
-  justify-self: center;
-}
-
-
 
 .subtitleOne{
-  grid-area: 12 / 6 / 12 / 10;
+  grid-area: 15 / 5 / 17 / 10;
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 690;
   font-style: normal;
-  font-size: 6vw;
+  font-size: 70px;
   color: black;
-  align-self: end; /*vertical*/
+  align-self: center; /*vertical*/
   justify-self: center; /*horizontal*/
 }
 
+.text{
+  grid-area: 17 / 2 / 25 / 20;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size:25px;
+  font-variation-settings:
+    "wdth" 100;
+  /*letter-spacing: .1vw;*/
+  color: black;
+  align-self: start;
+  justify-self: center;
+}
+
+.secondPic {
+  grid-area: 12 / 7 / 14 / 8 ;
+  align-self: center;
+  justify-self: center;
+  height: 20vw;
+  width: 20vw;
+  background-image: url("img/onmountain.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+
+.panel2{
+  width: 94vw;
+  height: 100vw;
+  grid-area: 19 / 2 / 50 / 12;
+  background-color: #fefdfb;
+  align-self: start;
+  justify-self: center;
+}
+
 .subtitleTwo{
-  grid-area: 27 / 8 / 27 / 6;
+  grid-area: 21 / 5 / 21 / 10;
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 690;
   font-style: normal;
-  font-size: 6vw;
+  font-size: 70px;
   color: black;
   align-self: end; 
   justify-self: center; 
 }
 
-.exp1{
-  grid-area: 30 / 2 / 40 / 8;
-  background-color: orange;
-  width: 20vw;
-  height: 25vw;
+.exp1{ /*3,5*/
+  grid-area: 25 / 2 / 31 / 4;
+  background-color: #FF8484;
+  /*border-width: 10vw;*/
+  width: 18vw;
+  height: 22vw;
+  justify-self: center;
 }
 
-.exp2{
-  grid-area: 30 / 6 / 40 / 8;
-  background-color: pink;
-  width: 20vw;
-  height: 25vw;
+.exptitle1{
+  grid-area: 23 / 1 / 23 / 5;
+  align-self: end;
   justify-self: center;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 30px;
+  color: black;
+  letter-spacing: .05vw;
+}
+
+.exptext1{
+  grid-area: 25 / 4 / 29 / 6;
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: black;
+  align-self: center;
+  justify-self: center;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+}
+
+
+.exp2{
+  grid-area: 25 / 8 / 31 / 10;
+  background-color: #4DCCBD;
+  width: 18vw;
+  height: 22vw;
+  justify-self: center;
+}
+
+.exptitle2{
+  grid-area: 23 / 8 / 23 / 10;
+  align-self: end;
+  justify-self: center;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 30px;
+  color: black;
+  letter-spacing: .05vw;
+}
+
+.exptext2{
+  grid-area: 25 / 10 / 29 / 12;
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: black;
+  align-self: center;
+  justify-self: center;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
 }
 
 .exp3{
-  grid-area: 30 / 10 / 40 / 12;
-  background-color: red;
-  width: 20vw;
-  height: 25vw;
+  grid-area: 31 / 4 / 37 / 6;
+  background-color: #4DCCBD;
+  width: 18vw;
+  height: 22vw;
   justify-self: center;
+}
+
+.exptitle3{
+  grid-area: 35 / 3 / 40 / 5;
+  align-self: end;
+  justify-self: center;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 690;
+  font-style: normal;
+  font-size: 30px;
+  color: black;
+  letter-spacing: .05vw;
 }
 
 .subtitleThree{
@@ -196,9 +286,28 @@
   justify-self: center;
 }
 
-.bottombar{
-  grid-area: 47 / 0 / 47 / 11;
-  background-color: pink;
-  width: 8vw;
-  height: 3vw;
+
+.expbutton1{
+  grid-area: 29 / 4 / 29 / 4;
+  background-color: rebeccapurple;
+  width: 3vw;
+  height: 1.9vw;
+  align-self: center;
+  justify-self: center;
+}
+
+
+.mcpic{
+  grid-area: 29 / 1 / 39 / 5;
+  align-self: center;
+  justify-self: start;
+  background-size: cover;
+  background-image: url( "img/mc.jpg" );
+  width: 15vw;
+  height: 5vw;
+  background-size: cover;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
 }
