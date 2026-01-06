@@ -3,58 +3,35 @@
 
 .container{
     width: 90vw;
-    height: 400vh;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(11, 8.18vw); /*fr= fill remainng space. col 4 can be is 100px (during resize)*/
     grid-template-rows: repeat(250, 11vh); /*rows will automatically dissapear if screen is too small, 7 rows of 100px*/
 }
 
-
-.topbar{
-  width: 172vw;
-  height: 40px;
-  background-color: #fefdfb;
-  position: sticky;
-  justify-self: center;
-  top: 0;
-}
-
-.mainPic {
-    grid-area: 1 / 6 / 6 / 8; /*row stat, col start, row end, col end*/
-    background-image: url( "img/onmountain.JPG" );
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 21vw;
-    height: 21vw;
-    border-radius: 50%;
-    align-self: end;
-    justify-self: center;
-}
-
 .panel1{
-  width: 98vw;
-  height: 50vw;
-  grid-area: 8 / 0 / 9 / 13;
+  width: 65vw;
+  height: 35vw;
+  grid-area: 2 / 3 / 9 / 13;
   background-color: #fefdfb;
   justify-self: start;
   /*align-self: end;*/
 }
 
 .title {
-  grid-area: 4 / 7 / 7 / 17;
+  grid-area: 2 / 2 / 5 / 17;
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
   font-weight: 690;
   font-style: normal;
-  font-size: 85px;
+  font-size: 70px;
   color: black;
   align-self: end;
   justify-self: center;
 }
 
 .heading {
-  grid-area: 7 / 7 / 10 / 17;
+  grid-area: 5 / 2 / 10 / 17;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -68,7 +45,7 @@
 }
 
 .linkedin {
-  grid-area: 8 / 9 / 9 / 12;
+  grid-area: 6 / 4 / 9 / 12;
   align-self: start;
   justify-self: center;
   background-image: url( "img/in.png" );
@@ -84,7 +61,7 @@
 }
 
 .github {
-  grid-area: 8 / 7 / 9 / 10;
+  grid-area: 6 / 2 / 7 / 10;
   align-self: start;
   justify-self: center;
   background-size: cover;
@@ -97,265 +74,4 @@
   background-repeat: no-repeat;
   border: none;
   outline: none;
-}
-
-
-.subtitleOne{
-  grid-area: 15 / 5 / 17 / 10;
-  font-family: "League Spartan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-  font-size: 70px;
-  color: black;
-  align-self: center; /*vertical*/
-  justify-self: center; /*horizontal*/
-}
-
-.text{
-  grid-area: 17 / 2 / 25 / 20;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size:25px;
-  font-variation-settings:
-    "wdth" 100;
-  /*letter-spacing: .1vw;*/
-  color: black;
-  align-self: start;
-  justify-self: center;
-}
-
-.secondPic {
-  grid-area: 12 / 7 / 14 / 8 ;
-  align-self: center;
-  justify-self: center;
-  height: 20vw;
-  width: 20vw;
-  background-image: url("img/onmountain.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-}
-
-/*Background for 'experiences'*/
-.panel2{
-  width: 94vw;
-  height: 100vw;
-  grid-area: 19 / 2 / 50 / 12;
-  background-color: #fefdfb;
-  align-self: start;
-  justify-self: center;
-}
-
-/*Experiences and projects title*/
-.subtitleTwo{
-  grid-area: 19 / 3 / 19 / 12;
-  font-family: "League Spartan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-  font-size: 70px;
-  color: black;
-  align-self: end; 
-  justify-self: center; 
-}
-
-/*Rectangle experience sits on*/
-.exp1A{
-  grid-area: 23 / 2 / 26 / 7;
-  background-color: #fefdfb;
-  width: 39vw;
-  height: 21vw;
-  justify-self: center;
-  align-self: start;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-
-/*Border of rectangle*/
-.exp1BorderA{ /*3,5*/
-  grid-area: 23 / 2 / 31 / 4;
-  background-color: #FF8484;
-  width: 32vw;
-  height: 22vw;
-  justify-self: start;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/*Rectangle summary text sits on*/
-.exp1B{
-  grid-area: 25 / 2 / 27 / 7;
-  background-color: #feacac;
-  width: 30vw;
-  height: 16vw;
-  justify-self: center;
-  align-self: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-
-/*Main title in experience (Ex: Product Mangement Intern)*/
-.exptitle1{
-  grid-area: 24 / 1 / 23 / 7;
-  align-self: start;
-  justify-self: center;
-  font-family: "League Spartan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-  font-size: 35px;
-  color: black;
-  letter-spacing: .05vw;
-}
-
-/*Company/org of experience (ex: Mastercard)*/
-.exp1text1{
-  grid-area: 22 / 4 / 25 / 7;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: black;
-  align-self: center;
-  justify-self: center;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-}
-
-/*Summary of experience*/
-.exp1text2{
-  grid-area: 24 / 3 / 27 / 6;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size:21px;
-  font-variation-settings:
-    "wdth" 100;
-  color: black;
-  align-self: center;
-  justify-self: center;
-}
-
-/*Skills*/
-.exp1text3{
-  grid-area: 25 / 3 / 29 / 6;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size:21px;
-  font-variation-settings:
-    "wdth" 100;
-  color: black;
-  align-self: center;
-  justify-self: start;
-}
-
-
-/*Rectangle experience sits on*/
-.exp2A{
-  grid-area: 26 / 7 / 34 / 10;
-  background-color: #fefdfb;
-  width: 39vw;
-  height: 21vw;
-  justify-self: start;
-  align-self: start;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-
-/*Border of rectangle*/
-.exp2BorderA{ /*3,5*/
-  grid-area: 26 / 8 / 29 / 10;
-  background-color: #4DCCBD;
-  width: 32vw;
-  height: 22vw;
-  justify-self: start;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/*Rectangle summary text sits on*/
-.exp2B{
-  grid-area: 27 / 12 / 31 / 7;
-  background-color: #a9eee6;
-  width: 30vw;
-  height: 16vw;
-  justify-self: center;
-  align-self: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-
-/*Main title in experience (Ex: Product Mangement Intern)*/
-.exptitle2{
-  grid-area: 27 / 8 / 26 / 12;
-  align-self: start;
-  justify-self: center;
-  font-family: "League Spartan", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-  font-size: 35px;
-  color: black;
-  letter-spacing: .05vw;
-}
-
-/*Company/org of experience (ex: Mastercard)*/
-.exp2text1{
-  grid-area: 26 / 9 / 27 / 12;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: black;
-  align-self: center;
-  justify-self: center;
-  font-optical-sizing: auto;
-  font-weight: 690;
-  font-style: normal;
-}
-
-/*Summary of experience*/
-.exp2text2{
-  grid-area: 27 / 8 / 30 / 11;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size:21px;
-  font-variation-settings:
-    "wdth" 100;
-  color: black;
-  align-self: center;
-  justify-self: center;
-}
-
-/*Skills*/
-.exp2text3{
-  grid-area: 31 / 7 / 29 / 12;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size:21px;
-  font-variation-settings:
-    "wdth" 100;
-  color: black;
-  align-self: center;
-  justify-self: center;
 }
